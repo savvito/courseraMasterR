@@ -1,6 +1,6 @@
 ---
 title: "Documentation of FARS Functions"
-author: "Josh Zirin"
+author: "Savvas Stampolloglou"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
