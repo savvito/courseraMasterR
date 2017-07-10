@@ -1,9 +1,9 @@
-Package: MyPackage
-Type: Package
+Package: courseraMasterR
+Type: PcourseraMasterR
 Title: FARS Functions
 Version: 0.1.0
-Author: Josh Zirin (jzirin3885@gmail.com)
-Maintainer: Josh Zirin <jzirin3885@gmail.com>
+Author: Savvas Stampolloglou (savvito@gmail.com)
+Maintainer: Savvas Stampolloglou <savvito@gmail.com>
 Depends: R (>= 3.1.0), dplyr, maps, readr, tidyr
 Description: More about what it does (maybe more than one line)
     Use four spaces when indenting paragraphs within the Description.
