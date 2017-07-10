@@ -19,19 +19,19 @@ The functions in this package use data from the US National Highway Traffic Safe
 
 These functions are mainly for internal use by the package:
 
-- `fars_read`: Reads in FARS data to a data frame/tibble
-- `make_filename`: Makes a file name for FARS data file given year.
+- `fars_read`: Reads in FARS data to a data frame
+- `make_filename`: Makes a file name according to the FARS data standard given the year.
 - `fars_read_years`:  Reads in the month & year for each accident from a FARS data file for multiple years.
 
 These functions produce output summarizing the FARS data:
 
-- `fars_summarize_years`: Summarizes the number of accidents by month by year for given years of FARS data.
-- `fars_map_state`: Plots the number of accidents from FARS data for a given year and state.
+- `fars_summarize_years`: Summarizes the number of accidents per month and year for given years.
+- `fars_map_state`: Plots the number of accidents using per state given year
 
 
 ## Example for fars_summarize_years
 
-This shows how the package can be used produce a table accidents by month for 2014 and 2015
+This example below is producing a table with accidents by month for 2014 and 2015
 
 ```{r, fig.show='hold', message=FALSE, warning=FALSE}
 library("courseraMasterR")
@@ -43,12 +43,11 @@ fars_summarize_years(2014:2015)
 
 ## Example for fars_map_state
 
-This shows how the package can be used to compare the location of accidents in West Virginia from 2013 to 2015
+This shows how the package can be used to compare the location of accidents in West Virginia for 2014 and 2015
 
 ```{r, fig.show='hold', message=FALSE, warning=FALSE}
 library("maps")
 library("MyPackage")
-fars_map_state(21,2013)
 fars_map_state(21,2014)
 fars_map_state(21,2015)
 ```
