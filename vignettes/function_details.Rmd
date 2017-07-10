@@ -1,0 +1,55 @@
+---
+title: "Documentation of FARS Functions"
+author: "Josh Zirin"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+This is an example vignette for the course "Mastering Software Development in R".  
+
+## Data Used in Package
+
+The functions in this package use data from the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System, which is a nationwide census providing the American public yearly data regarding fatal injuries suffered in motor vehicle traffic crashes.  Data was provided in the form of files for each accident year (e.g., "accident_2013.csv.bz").  Source data is at https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars
+
+## Functions
+
+These functions are mainly for internal use by the package:
+
+- `fars_read`: Reads in FARS data to a data frame/tibble
+- `make_filename`: Makes a file name for FARS data file given year.
+- `fars_read_years`:  Reads in the month & year for each accident from a FARS data file for multiple years.
+
+These functions produce output summarizing the FARS data:
+
+- `fars_summarize_years`: Summarizes the number of accidents by month by year for given years of FARS data.
+- `fars_map_state`: Plots the number of accidents from FARS data for a given year and state.
+
+
+## Example for fars_summarize_years
+
+This shows how the package can be used produce a table accidents by month for 2014 and 2015
+
+```{r, fig.show='hold', message=FALSE, warning=FALSE}
+library("MyPackage")
+library("magrittr")
+library("tidyverse")
+fars_summarize_years(2014:2015)
+```
+
+
+## Example for fars_map_state
+
+This shows how the package can be used to compare the location of accidents in West Virginia from 2013 to 2015
+
+```{r, fig.show='hold', message=FALSE, warning=FALSE}
+library("maps")
+library("MyPackage")
+fars_map_state(21,2013)
+fars_map_state(21,2014)
+fars_map_state(21,2015)
+```
+
