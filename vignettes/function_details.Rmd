@@ -34,7 +34,7 @@ These functions produce output summarizing the FARS data:
 This shows how the package can be used produce a table accidents by month for 2014 and 2015
 
 ```{r, fig.show='hold', message=FALSE, warning=FALSE}
-library("MyPackage")
+library("courseraMasterR")
 library("magrittr")
 library("tidyverse")
 fars_summarize_years(2014:2015)
