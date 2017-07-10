@@ -47,7 +47,7 @@ This shows how the package can be used to compare the location of accidents in W
 
 ```{r, fig.show='hold', message=FALSE, warning=FALSE}
 library("maps")
-library("MyPackage")
+library("courseraMasterR")
 fars_map_state(21,2014)
 fars_map_state(21,2015)
 ```
